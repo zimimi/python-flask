@@ -7,10 +7,6 @@ app = Flask(__name__)
 def root():
     return render_template("index.html")
 
-@app.route("/help")
-def helppage():
-    return render_template("help.html")
-
 #--------Main------------------
 if __name__ == "__main__":
     app.debug = True
