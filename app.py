@@ -1,18 +1,18 @@
 from flask import Flask, render_template
 
-application = Flask(__name__)
+app = Flask(__name__)
 
 
-@application.route("/")
+@app.route("/")
 def root():
     return render_template("index.html")
 
-@application.route("/help")
+@app.route("/help")
 def helppage():
     return render_template("help.html")
 
 #--------Main------------------
 if __name__ == "__main__":
-    application.debug = True
-    application.run()
+    app.debug = True
+    app.run()
 #------------------------------
